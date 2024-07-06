@@ -1,0 +1,52 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/notificationmanagement?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: root
+    password: 123456
+  jackson:
+    serialization:
+      indent_output: true
+  druid:
+    validation-query: SELECT 1
+    test-while-idle: true
+    test-on-borrow: true
+    test-on-return: false
+  redis:
+    host: localhost
+    port: 6379
+    # 如果需要密码，请取消注释并设置密码
+    # password: yourpassword
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+
+server:
+  port: 8085
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.example.notificationmanagement.pojo
+
+knife4j:
+  enable: true
+  openapi:
+    title: API调试接口
+    description: 没事就得写代码
+    concat: 洋哥
+    version: v4.0
+    license: Apache 2.0
+    group:
+      default:
+        group-name: knife4j-group # 确保组名唯一
+        api-rule: package
+        api-rule-resources:
+          - com.knife4j.demo.new3

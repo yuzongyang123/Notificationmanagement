@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.notificationmanagement.mapper.UserOrganizationMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.notificationmanagement.pojo.UserOrganization">
+            <id property="userorganizationid" column="UserOrganizationID" jdbcType="INTEGER"/>
+            <result property="userid" column="UserID" jdbcType="INTEGER"/>
+            <result property="organizationid" column="OrganizationID" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        UserOrganizationID,UserID,OrganizationID
+    </sql>
+</mapper>

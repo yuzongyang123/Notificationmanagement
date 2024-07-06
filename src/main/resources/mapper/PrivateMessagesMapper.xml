@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.notificationmanagement.mapper.PrivateMessagesMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.notificationmanagement.pojo.PrivateMessages">
+            <id property="messageid" column="MessageID" jdbcType="INTEGER"/>
+            <result property="senderid" column="SenderID" jdbcType="INTEGER"/>
+            <result property="receiverid" column="ReceiverID" jdbcType="INTEGER"/>
+            <result property="content" column="Content" jdbcType="VARCHAR"/>
+            <result property="imageurl" column="ImageURL" jdbcType="VARCHAR"/>
+            <result property="sentat" column="SentAt" jdbcType="TIMESTAMP"/>
+            <result property="isread" column="IsRead" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        MessageID,SenderID,ReceiverID,
+        Content,ImageURL,SentAt,
+        IsRead
+    </sql>
+</mapper>

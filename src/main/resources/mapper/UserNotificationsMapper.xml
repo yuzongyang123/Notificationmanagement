@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.notificationmanagement.mapper.UserNotificationsMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.notificationmanagement.pojo.UserNotifications">
+            <id property="usernotificationid" column="UserNotificationID" jdbcType="INTEGER"/>
+            <result property="userid" column="UserID" jdbcType="INTEGER"/>
+            <result property="notificationid" column="NotificationID" jdbcType="INTEGER"/>
+            <result property="isread" column="IsRead" jdbcType="TINYINT"/>
+            <result property="isfavorite" column="IsFavorite" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        UserNotificationID,UserID,NotificationID,
+        IsRead,IsFavorite
+    </sql>
+</mapper>

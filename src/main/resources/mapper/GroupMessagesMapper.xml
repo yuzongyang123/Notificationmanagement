@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.notificationmanagement.mapper.GroupMessagesMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.notificationmanagement.pojo.GroupMessages">
+            <id property="groupmessageid" column="GroupMessageID" jdbcType="INTEGER"/>
+            <result property="senderid" column="SenderID" jdbcType="INTEGER"/>
+            <result property="groupid" column="GroupID" jdbcType="INTEGER"/>
+            <result property="content" column="Content" jdbcType="VARCHAR"/>
+            <result property="sentat" column="SentAt" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        GroupMessageID,SenderID,GroupID,
+        Content,SentAt
+    </sql>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.notificationmanagement.mapper.UsersMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.notificationmanagement.pojo.Users">
+            <id property="userid" column="UserID" jdbcType="INTEGER"/>
+            <result property="username" column="Username" jdbcType="VARCHAR"/>
+            <result property="password" column="Password" jdbcType="VARCHAR"/>
+            <result property="isactive" column="IsActive" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        UserID,Username,Password,
+        Email,IsActive
+    </sql>
+
+
+</mapper>
